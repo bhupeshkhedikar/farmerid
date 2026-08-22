@@ -1,0 +1,2534 @@
+/* =========================================================
+   FARMER ID GENERATOR
+   Responsive: Desktop + Tablet + Mobile
+========================================================= */
+
+.farmer-generator-page {
+  min-height: 100vh;
+  background: #f4f8f3;
+  color: #193526;
+
+  font-family:
+    "Noto Sans Devanagari",
+    "Noto Sans Marathi",
+    Arial,
+    sans-serif;
+
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.farmer-generator-header {
+  width: 100%;
+  background: #08713a;
+  color: #fff;
+  padding: 18px 0;
+}
+
+.farmer-header-inner {
+  width: min(1440px, calc(100% - 40px));
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.farmer-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.farmer-brand-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  font-size: 25px;
+}
+
+.farmer-brand h1 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 750;
+}
+
+.farmer-brand p {
+  margin: 3px 0 0;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 11px;
+  letter-spacing: 0.4px;
+}
+
+.header-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #fff;
+
+  font-size: 11px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #b7ef40;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.farmer-generator-container {
+  width: min(1440px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 30px 0 60px;
+}
+
+.generator-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(500px, 0.95fr);
+
+  align-items: start;
+
+  gap: 30px;
+}
+
+/* =========================================================
+   FORM PANEL
+========================================================= */
+
+.generator-form-panel {
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  border: 1px solid #e2ebe3;
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 35px rgba(23, 66, 38, 0.06);
+}
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.form-section {
+  padding: 27px 28px;
+
+  border-bottom: 1px solid #edf1ed;
+}
+
+.form-section:last-of-type {
+  border-bottom: 0;
+}
+
+.form-section-header {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 23px;
+}
+
+.section-number {
+  width: 41px;
+  height: 41px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #e8f5e8;
+
+  color: #14733b;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.form-section-header h2 {
+  margin: 0 0 3px;
+
+  color: #183d29;
+
+  font-size: 18px;
+  line-height: 1.3;
+
+  font-weight: 750;
+}
+
+.form-section-header p {
+  margin: 0;
+
+  color: #7e8982;
+
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.section-heading-with-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 17px;
+}
+
+.form-field {
+  min-width: 0;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #34483b;
+
+  font-size: 12px;
+  line-height: 1.4;
+
+  font-weight: 650;
+}
+
+.form-label span {
+  margin-left: 3px;
+
+  color: #d93434;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+
+  display: block;
+
+  padding: 11px 12px;
+
+  border: 1px solid #dce5de;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #fff;
+
+  color: #263b2f;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  line-height: 1.4;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-field textarea {
+  min-height: 85px;
+
+  resize: vertical;
+}
+
+.form-field input:hover,
+.form-field select:hover,
+.form-field textarea:hover {
+  border-color: #b9cbbb;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #329151;
+
+  box-shadow:
+    0 0 0 3px rgba(50, 145, 81, 0.1);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #a4aea7;
+}
+
+.form-field input[type="date"] {
+  min-height: 42px;
+}
+
+.form-field select {
+  min-height: 42px;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   PHOTO UPLOAD
+========================================================= */
+
+.photo-upload-area {
+  grid-column: 1 / -1;
+}
+
+.photo-upload-box {
+  min-height: 125px;
+
+  overflow: hidden;
+
+  border: 1.5px dashed #b6ceb9;
+  border-radius: 11px;
+
+  background: #f9fcf8;
+}
+
+.photo-placeholder {
+  min-height: 125px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.photo-placeholder:hover {
+  background: #f2f9f1;
+}
+
+.photo-icon {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #e6f5e6;
+
+  font-size: 18px;
+}
+
+.photo-placeholder strong {
+  color: #31633f;
+
+  font-size: 12px;
+}
+
+.photo-placeholder small {
+  color: #89968e;
+
+  font-size: 10px;
+}
+
+.uploaded-photo-wrapper {
+  position: relative;
+
+  width: 120px;
+  height: 120px;
+
+  margin: 10px;
+}
+
+.uploaded-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+.remove-photo {
+  position: absolute;
+
+  top: -7px;
+  right: -7px;
+
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #d83737;
+
+  color: #fff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 17px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 5;
+}
+
+/* =========================================================
+   LAND RECORDS
+========================================================= */
+
+.add-land-btn {
+  flex-shrink: 0;
+
+  border: 0;
+  border-radius: 8px;
+
+  padding: 8px 12px;
+
+  background: #e8f5e9;
+
+  color: #19713b;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-land-btn:hover {
+  background: #dcefdc;
+
+  transform: translateY(-1px);
+}
+
+.land-records {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.land-record {
+  padding: 15px;
+
+  border: 1px solid #e2eae3;
+  border-radius: 11px;
+
+  background: #fafcf9;
+}
+
+.land-record-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+}
+
+.land-record-top strong {
+  color: #376245;
+
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.remove-land-btn {
+  padding: 3px 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #d14040;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.remove-land-btn:hover {
+  text-decoration: underline;
+}
+
+.land-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 13px;
+}
+
+.total-area-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 14px;
+
+  padding: 12px 14px;
+
+  border-radius: 9px;
+
+  background: #eaf6e9;
+
+  color: #3a6044;
+
+  font-size: 12px;
+}
+
+.total-area-box strong {
+  color: #13703a;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   DESIGN OPTIONS
+========================================================= */
+
+.design-options {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.design-option {
+  min-width: 0;
+
+  padding: 8px;
+
+  border: 1px solid #dfe8e0;
+  border-radius: 10px;
+
+  background: #fff;
+
+  text-align: left;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.design-option:hover {
+  border-color: #8ab293;
+
+  transform: translateY(-1px);
+}
+
+.design-option.active {
+  border-color: #238047;
+
+  box-shadow:
+    0 0 0 2px rgba(35, 128, 71, 0.1);
+
+  background: #f8fcf8;
+}
+
+.design-option > strong {
+  display: block;
+
+  padding: 7px 3px 2px;
+
+  color: #36503e;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.mini-card {
+  height: 62px;
+
+  padding: 9px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+}
+
+.mini-card span {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.mini-card small {
+  font-size: 7px;
+}
+
+.mini-card-green {
+  background: #dff6d6;
+
+  border-bottom: 4px solid #67c632;
+
+  color: #0e6b35;
+}
+
+.mini-card-modern {
+  background: #0b6636;
+
+  color: #fff;
+}
+
+.mini-card-minimal {
+  border: 1px solid #d6e4d8;
+
+  background: #fff;
+
+  color: #175b35;
+}
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  padding: 20px 28px;
+}
+
+.form-actions button {
+  min-height: 40px;
+
+  padding: 9px 15px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.form-actions button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.reset-btn {
+  border: 1px solid #dce5de;
+
+  background: #fff;
+
+  color: #68766d;
+}
+
+.reset-btn:hover {
+  background: #f8faf8;
+}
+
+.print-btn {
+  border: 1px solid #cfe2d2;
+
+  background: #edf7ee;
+
+  color: #1b7040;
+}
+
+.print-btn:hover {
+  background: #e2f1e4;
+}
+
+.download-btn {
+  border: 0;
+
+  background: #167b40;
+
+  color: #fff;
+}
+
+.download-btn:hover {
+  background: #0f6635;
+}
+
+.download-btn:disabled {
+  opacity: 0.6;
+
+  cursor: wait;
+
+  transform: none !important;
+}
+
+.unofficial-notice {
+  margin: 0 28px 25px;
+
+  padding: 11px 13px;
+
+  border: 1px solid #f0dfb0;
+  border-radius: 8px;
+
+  background: #fff9eb;
+
+  color: #79632d;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PREVIEW PANEL
+========================================================= */
+
+.preview-panel {
+  position: sticky;
+
+  top: 20px;
+
+  min-width: 0;
+}
+
+.preview-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 13px;
+}
+
+.preview-panel-header h2 {
+  margin: 0 0 3px;
+
+  color: #173d29;
+
+  font-size: 19px;
+  line-height: 1.3;
+
+  font-weight: 750;
+}
+
+.preview-panel-header p {
+  margin: 0;
+
+  color: #7d8981;
+
+  font-size: 11px;
+}
+
+.live-badge {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 6px 9px;
+
+  border-radius: 20px;
+
+  background: #e7f6e8;
+
+  color: #19733c;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.live-badge span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #34a752;
+}
+
+/* =========================================================
+   FRONT / BACK SWITCH
+========================================================= */
+
+.side-switcher {
+  width: fit-content;
+
+  display: flex;
+
+  gap: 3px;
+
+  margin: 0 auto 17px;
+
+  padding: 4px;
+
+  border-radius: 9px;
+
+  background: #e4ebe5;
+}
+
+.side-switcher button {
+  min-width: 105px;
+
+  padding: 8px 13px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #6c786f;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.side-switcher button.active {
+  background: #fff;
+
+  color: #176e3a;
+
+  box-shadow:
+    0 2px 7px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   CARD PREVIEW AREA
+========================================================= */
+
+.card-preview-area {
+  width: 100%;
+
+  min-width: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 8px 0 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  scrollbar-width: thin;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+/*
+ * IMPORTANT:
+ *
+ * Do NOT use display:none for the hidden card.
+ *
+ * html2canvas cannot capture display:none elements.
+ *
+ * The hidden card is moved outside the viewport instead,
+ * while remaining rendered in the DOM.
+ */
+.preview-hidden {
+  position: absolute !important;
+
+  left: -10000px !important;
+  top: 0 !important;
+
+  display: flex !important;
+
+  visibility: visible !important;
+
+  opacity: 0 !important;
+
+  pointer-events: none !important;
+
+  width: 100% !important;
+
+  max-width: none !important;
+
+  overflow: visible !important;
+}
+
+/* =========================================================
+   CARD BASE
+========================================================= */
+
+.farmer-card {
+  position: relative;
+
+  width: 650px;
+  min-width: 650px;
+
+  height: 390px;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+
+  color: #07502c;
+
+  box-shadow:
+    0 18px 40px rgba(17, 72, 36, 0.15);
+
+  font-family:
+    "Noto Sans Devanagari",
+    "Noto Sans Marathi",
+    Arial,
+    sans-serif;
+}
+
+/* =========================================================
+   CLASSIC CARD
+========================================================= */
+
+.farmer-card-classic {
+  background: #e2f8da;
+}
+
+.farmer-card-classic::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 6px;
+
+  background: #72dd00;
+}
+
+.farmer-card-classic::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 7px;
+
+  background: #08732e;
+}
+
+/* =========================================================
+   MODERN CARD
+========================================================= */
+
+.farmer-card-modern {
+  background: #e3f4dd;
+}
+
+.farmer-card-modern::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 12px;
+
+  background: #075b31;
+}
+
+/* =========================================================
+   MINIMAL CARD
+========================================================= */
+
+.farmer-card-minimal {
+  background: #f8fcf7;
+
+  border: 1px solid #bdd4c0;
+
+  color: #1a5131;
+}
+
+.farmer-card-minimal::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 7px;
+
+  background: #0b6635;
+}
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.card-top {
+  position: relative;
+  z-index: 2;
+
+  height: 78px;
+
+  padding: 20px 25px 5px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  box-sizing: border-box;
+}
+
+.card-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.card-logo-symbol {
+  flex-shrink: 0;
+
+  font-size: 31px;
+  line-height: 1;
+}
+
+.card-logo strong {
+  color: #079333;
+
+  font-size: 31px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.card-logo strong span {
+  color: #efb916;
+}
+
+.card-farmer-icon {
+  width: 53px;
+  height: 53px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 4px solid #fff;
+  border-radius: 50%;
+
+  background: #1a783c;
+
+  font-size: 25px;
+}
+
+/* =========================================================
+   CARD MAIN CONTENT
+========================================================= */
+
+.card-main-content {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    105px
+    minmax(0, 1fr)
+    105px;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 12px 25px 0;
+
+  box-sizing: border-box;
+}
+
+.card-photo {
+  width: 105px;
+  height: 125px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  border: 3px solid #fff;
+
+  background: #cfdfcb;
+}
+
+.card-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.card-photo-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #6c8b6d;
+}
+
+.card-photo-placeholder span {
+  font-size: 29px;
+}
+
+.card-photo-placeholder small {
+  margin-top: 3px;
+
+  font-size: 10px;
+}
+
+.card-info {
+  min-width: 0;
+}
+
+.card-info-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 6px;
+
+  margin-bottom: 8px;
+
+  color: #0d4b2b;
+
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.card-info-row strong {
+  flex-shrink: 0;
+
+  font-weight: 800;
+}
+
+.card-info-row span {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+
+  font-weight: 600;
+}
+
+.card-qr {
+  width: 105px;
+  height: 105px;
+
+  box-sizing: border-box;
+
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+}
+
+.card-qr img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.qr-placeholder {
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 5px dotted #111;
+
+  color: #111;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   FARMER ID
+========================================================= */
+
+.card-id-section {
+  position: relative;
+  z-index: 2;
+
+  padding: 15px 25px 5px;
+}
+
+.card-id-section small {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #40835b;
+
+  font-size: 8px;
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.card-id-section strong {
+  display: block;
+
+  color: #07592e;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 42px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.card-bottom {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 45px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: center;
+
+  background: #08732e;
+
+  z-index: 4;
+}
+
+.card-bottom::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 6px;
+
+  background: #74e500;
+}
+
+.tractor-icon {
+  position: relative;
+
+  z-index: 2;
+
+  bottom: 2px;
+
+  padding: 0 14px;
+
+  font-size: 36px;
+  line-height: 1;
+}
+
+/* =========================================================
+   BACK CARD
+========================================================= */
+
+.farmer-card-back {
+  height: 390px;
+}
+
+/* =========================================================
+   BACK HEADER
+========================================================= */
+
+.back-card-header {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 27px 25px 18px;
+}
+
+.back-address {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 7px;
+
+  max-width: 470px;
+
+  color: #144b2e;
+
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.55;
+}
+
+.back-address strong {
+  flex-shrink: 0;
+
+  white-space: nowrap;
+}
+
+.back-address span {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+}
+
+.back-logo {
+  flex-shrink: 0;
+
+  padding-top: 0;
+}
+
+.back-logo strong {
+  color: #079333;
+
+  font-size: 29px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.back-logo span {
+  color: #efb916;
+}
+
+/* =========================================================
+   LAND TABLE
+========================================================= */
+
+.land-table-wrapper {
+  position: relative;
+  z-index: 2;
+
+  padding: 5px 25px 0;
+
+  overflow: hidden;
+}
+
+.land-table {
+  width: 100%;
+
+  table-layout: fixed;
+
+  border-collapse: collapse;
+
+  color: #143f29;
+
+  font-size: 10px;
+}
+
+.land-table th,
+.land-table td {
+  padding: 9px 6px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  border: 1px solid #82a88a;
+
+  overflow-wrap: anywhere;
+}
+
+.land-table th {
+  background: #aac9ac;
+
+  color: #fff;
+
+  font-weight: 800;
+}
+
+.land-table td {
+  background: #edf8e9;
+
+  font-weight: 650;
+}
+
+.land-table .total-row td {
+  background: #d8efd4;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   BACK FOOTER
+========================================================= */
+
+.back-card-footer {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: center;
+
+  background: #08732e;
+
+  z-index: 4;
+}
+
+.back-card-footer::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 6px;
+
+  background: #74e500;
+}
+
+.back-tractor {
+  position: relative;
+
+  z-index: 2;
+
+  bottom: 2px;
+
+  font-size: 35px;
+  line-height: 1;
+}
+
+.unofficial-card-label {
+  position: absolute;
+
+  right: 15px;
+  bottom: 7px;
+
+  z-index: 3;
+
+  padding: 4px 9px;
+
+  border: 1px solid #444;
+  border-radius: 15px;
+
+  background: #fff;
+
+  color: #d21e1e;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   MODERN DESIGN OVERRIDES
+========================================================= */
+
+.farmer-card-modern .card-logo strong,
+.farmer-card-modern .back-logo strong {
+  color: #087339;
+}
+
+.farmer-card-modern .card-bottom {
+  background: #075b31;
+}
+
+.farmer-card-modern .card-bottom::before {
+  background: #3da74b;
+}
+
+/* =========================================================
+   MINIMAL DESIGN OVERRIDES
+========================================================= */
+
+.farmer-card-minimal .card-logo strong,
+.farmer-card-minimal .back-logo strong {
+  color: #155f36;
+}
+
+.farmer-card-minimal .card-info-row {
+  color: #28563a;
+}
+
+.farmer-card-minimal .card-id-section strong {
+  color: #155f36;
+}
+
+.farmer-card-minimal .card-bottom {
+  background: #1a683b;
+}
+
+.farmer-card-minimal .card-bottom::before {
+  background: #8bca45;
+}
+
+/* =========================================================
+   PREVIEW HELP
+========================================================= */
+
+.preview-help {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-top: 3px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #e0e9e1;
+  border-radius: 10px;
+
+  background: #fff;
+}
+
+.help-icon {
+  width: 29px;
+  height: 29px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #eaf6ea;
+
+  font-size: 14px;
+}
+
+.preview-help strong {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #385944;
+
+  font-size: 11px;
+}
+
+.preview-help p {
+  margin: 0;
+
+  color: #89958c;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1250px) {
+  .generator-layout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(480px, 0.95fr);
+
+    gap: 22px;
+  }
+
+  .card-main-content {
+    grid-template-columns:
+      95px
+      minmax(0, 1fr)
+      90px;
+
+    gap: 14px;
+  }
+
+  .card-photo {
+    width: 95px;
+    height: 115px;
+  }
+
+  .card-qr {
+    width: 90px;
+    height: 90px;
+  }
+
+  .card-id-section strong {
+    font-size: 38px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .generator-layout {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .preview-panel {
+    position: static;
+
+    width: 100%;
+  }
+
+  .preview-panel-header {
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .side-switcher {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-preview-area {
+    justify-content: flex-start;
+
+    max-width: 100%;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .farmer-card {
+    flex-shrink: 0;
+  }
+
+  .preview-help {
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* =========================================================
+   TABLET / 900px
+========================================================= */
+
+@media (max-width: 900px) {
+  .farmer-generator-container {
+    width: calc(100% - 30px);
+  }
+
+  .generator-layout {
+    gap: 20px;
+  }
+
+  .form-section {
+    padding: 24px 22px;
+  }
+
+  .form-actions {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .unofficial-notice {
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .farmer-generator-header {
+    padding: 15px 0;
+  }
+
+  .farmer-header-inner,
+  .farmer-generator-container {
+    width: calc(100% - 24px);
+  }
+
+  .farmer-brand {
+    gap: 10px;
+  }
+
+  .farmer-brand-icon {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 11px;
+
+    font-size: 21px;
+  }
+
+  .farmer-brand h1 {
+    font-size: 19px;
+  }
+
+  .farmer-brand p {
+    display: none;
+  }
+
+  .header-status {
+    display: none;
+  }
+
+  .farmer-generator-container {
+    padding-top: 14px;
+    padding-bottom: 35px;
+  }
+
+  .generator-layout {
+    gap: 18px;
+  }
+
+  .generator-form-panel {
+    border-radius: 14px;
+  }
+
+  .form-section {
+    padding: 21px 17px;
+  }
+
+  .form-section-header {
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+  }
+
+  .section-number {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+  }
+
+  .form-section-header h2 {
+    font-size: 16px;
+  }
+
+  .form-section-header p {
+    font-size: 10px;
+  }
+
+  /* -------------------------------------------------------
+     FORM
+  ------------------------------------------------------- */
+
+  .form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .form-field-full {
+    grid-column: auto;
+  }
+
+  .photo-upload-area {
+    grid-column: auto;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-size: 13px;
+  }
+
+  /* -------------------------------------------------------
+     LAND
+  ------------------------------------------------------- */
+
+  .section-heading-with-button {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 9px;
+  }
+
+  .add-land-btn {
+    margin-top: 3px;
+  }
+
+  .land-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  /* -------------------------------------------------------
+     DESIGN
+  ------------------------------------------------------- */
+
+  .design-options {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .design-option {
+    display: grid;
+
+    grid-template-columns: 105px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 10px;
+  }
+
+  .design-option > strong {
+    padding: 0;
+  }
+
+  /* -------------------------------------------------------
+     ACTIONS
+  ------------------------------------------------------- */
+
+  .form-actions {
+    flex-wrap: wrap;
+
+    padding: 17px;
+  }
+
+  .form-actions button {
+    flex: 1 1 calc(50% - 5px);
+
+    min-width: 0;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .download-btn {
+    flex-basis: 100%;
+  }
+
+  .unofficial-notice {
+    margin: 0 17px 20px;
+  }
+
+  /* -------------------------------------------------------
+     PREVIEW
+  ------------------------------------------------------- */
+
+  .preview-panel {
+    width: 100%;
+  }
+
+  .preview-panel-header {
+    margin-bottom: 12px;
+  }
+
+  .preview-panel-header h2 {
+    font-size: 17px;
+  }
+
+  .preview-panel-header p {
+    font-size: 10px;
+  }
+
+  .side-switcher {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .side-switcher button {
+    flex: 1;
+  }
+
+  .card-preview-area {
+    justify-content: flex-start;
+
+    padding-top: 7px;
+    padding-bottom: 20px;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /*
+   * Keep the real card dimensions.
+   *
+   * Don't shrink the card because that makes
+   * the ID/photo/QR look distorted.
+   */
+  .farmer-card {
+    width: 650px;
+    min-width: 650px;
+
+    height: 390px;
+  }
+
+  /*
+   * Hidden card must remain rendered for html2canvas.
+   */
+  .preview-hidden {
+    position: absolute !important;
+
+    left: -10000px !important;
+    top: 0 !important;
+
+    display: flex !important;
+
+    visibility: visible !important;
+
+    opacity: 0 !important;
+
+    width: 100% !important;
+
+    overflow: visible !important;
+  }
+
+  .preview-help {
+    margin-top: 0;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .farmer-generator-container {
+    width: calc(100% - 16px);
+  }
+
+  .form-section {
+    padding: 18px 14px;
+  }
+
+  .form-section-header {
+    align-items: flex-start;
+  }
+
+  .section-number {
+    width: 36px;
+    height: 36px;
+
+    font-size: 10px;
+  }
+
+  .form-section-header h2 {
+    font-size: 15px;
+  }
+
+  .form-section-header p {
+    font-size: 9px;
+  }
+
+  .form-actions {
+    padding: 14px;
+  }
+
+  .form-actions button {
+    min-height: 38px;
+
+    font-size: 11px;
+  }
+
+  .unofficial-notice {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .preview-panel-header {
+    align-items: flex-start;
+  }
+
+  .live-badge {
+    padding: 5px 8px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .farmer-brand h1 {
+    font-size: 17px;
+  }
+
+  .form-actions button {
+    font-size: 10px;
+  }
+
+  .side-switcher button {
+    min-width: 0;
+
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  html,
+  body {
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: #fff !important;
+  }
+
+  .farmer-generator-page {
+    min-height: 0 !important;
+
+    background: #fff !important;
+  }
+
+  .farmer-generator-header,
+  .generator-form-panel,
+  .preview-panel-header,
+  .side-switcher,
+  .preview-help {
+    display: none !important;
+  }
+
+  .farmer-generator-container {
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: #fff !important;
+  }
+
+  .generator-layout {
+    display: block !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .preview-panel {
+    position: static !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .card-preview-area {
+    width: 100% !important;
+
+    min-height: 100vh;
+
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+
+    background: #fff !important;
+
+    page-break-after: always;
+  }
+
+  .card-preview-area:last-child {
+    page-break-after: auto;
+  }
+
+  /*
+   * IMPORTANT:
+   * Hidden preview must be visible while printing.
+   */
+  .preview-hidden {
+    position: static !important;
+
+    left: auto !important;
+    top: auto !important;
+
+    display: flex !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+    width: 100% !important;
+
+    pointer-events: auto !important;
+
+    overflow: visible !important;
+  }
+
+  .farmer-card {
+    width: 650px !important;
+    min-width: 650px !important;
+
+    height: 390px !important;
+
+    flex-shrink: 0 !important;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY / FOCUS
+========================================================= */
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #3c9b59;
+
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .farmer-generator-page *,
+  .farmer-generator-page *::before,
+  .farmer-generator-page *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+   CUSTOM AGRISTACK LOGO
+========================================================= */
+
+.farmer-brand-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px;
+  box-sizing: border-box;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.farmer-brand-icon img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   FRONT CARD AGRISTACK LOGO
+========================================================= */
+
+.card-logo {
+  display: flex;
+  align-items: center;
+
+  width: 230px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+}
+
+.card-logo-image {
+  width: 220px;
+  height: 58px;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: left center;
+}
+
+
+/* =========================================================
+   FARMER IMAGE
+========================================================= */
+
+.card-farmer-icon {
+  width: 64px;
+  height: 64px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  border: 3px solid #ffffff;
+
+  box-sizing: border-box;
+}
+
+.card-farmer-icon img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   BACK CARD LOGO
+========================================================= */
+
+.back-logo {
+  width: 180px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  overflow: hidden;
+}
+
+.back-logo img {
+  width: 175px;
+  height: 55px;
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: right center;
+}
+
+
+/* =========================================================
+   DESIGN PREVIEW LOGO
+========================================================= */
+
+.mini-card-logo {
+  width: 90px;
+  height: 32px;
+
+  display: block;
+
+  object-fit: contain;
+
+  margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .farmer-brand-icon {
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+  }
+
+  .card-logo {
+    width: 210px;
+    height: 52px;
+  }
+
+  .card-logo-image {
+    width: 200px;
+    height: 52px;
+  }
+
+  .card-farmer-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .back-logo {
+    width: 155px;
+    height: 45px;
+  }
+
+  .back-logo img {
+    width: 150px;
+    height: 45px;
+  }
+
+  .mini-card-logo {
+    width: 80px;
+    height: 28px;
+  }
+}
+
+/* =========================================================
+   TRACTOR IMAGE - FRONT
+========================================================= */
+
+.tractor-icon {
+  width: 125px;
+  height: 70px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.tractor-icon img {
+  width: 125px;
+  height: 70px;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+
+/* =========================================================
+   TRACTOR IMAGE - BACK
+========================================================= */
+
+.back-tractor {
+  width: 110px;
+  height: 60px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.back-tractor img {
+  width: 110px;
+  height: 60px;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .tractor-icon {
+    width: 100px;
+    height: 58px;
+  }
+
+  .tractor-icon img {
+    width: 100px;
+    height: 58px;
+  }
+
+  .back-tractor {
+    width: 90px;
+    height: 52px;
+  }
+
+  .back-tractor img {
+    width: 90px;
+    height: 52px;
+  }
+
+}
