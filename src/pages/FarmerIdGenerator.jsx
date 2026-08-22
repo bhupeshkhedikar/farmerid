@@ -943,7 +943,7 @@ const FarmerIdGenerator = () => {
                                         onChange={
                                             handleChange
                                         }
-                                        placeholder="उदा. राजन जनार्दन तितिरमारे"
+                                        placeholder="उदा. रामराव शिंदे"
                                     />
 
                                 </div>
@@ -1144,7 +1144,7 @@ const FarmerIdGenerator = () => {
                                         onChange={
                                             handleChange
                                         }
-                                        placeholder="उदा. AT POST LAKHORI TAH LAKHANI DIST BHANDARA WARD NO 3 LAKHORI"
+                                        placeholder="उदा. मू पो कोल्हापुर तहसील कोल्हापुर जिल्हा कोल्हापुर महाराष्ट्र 416001"
                                         rows="3"
                                     />
 
@@ -1165,7 +1165,7 @@ const FarmerIdGenerator = () => {
                                         onChange={
                                             handleChange
                                         }
-                                        placeholder="उदा. भंडारा"
+                                        placeholder="उदा. कोल्हापुर "
                                     />
 
                                 </div>
@@ -1185,7 +1185,7 @@ const FarmerIdGenerator = () => {
                                         onChange={
                                             handleChange
                                         }
-                                        placeholder="उदा. लाखनी"
+                                        placeholder="उदा. कोल्हापुर "
                                     />
 
                                 </div>
@@ -1205,7 +1205,7 @@ const FarmerIdGenerator = () => {
                                         onChange={
                                             handleChange
                                         }
-                                        placeholder="उदा. लाखोरी"
+                                        placeholder="उदा. कोल्हापुर "
                                     />
 
                                 </div>
@@ -1225,7 +1225,7 @@ const FarmerIdGenerator = () => {
                                         onChange={
                                             handleChange
                                         }
-                                        placeholder="उदा. 441804"
+                                        placeholder="उदा. 416001"
                                         maxLength="6"
                                         inputMode="numeric"
                                     />
